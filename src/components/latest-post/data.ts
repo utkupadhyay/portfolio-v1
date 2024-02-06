@@ -1,0 +1,32 @@
+export const data = [
+  {
+    imgURL: '',
+    altTxt: '',
+    blogURL: '',
+    postedOn: '',
+    updatedOn: '',
+    author: 'Utkarsh',
+    content: 'abcd',
+    title: 'xyz',
+  },
+  {
+    imgURL: '',
+    altTxt: '',
+    blogURL: '',
+    postedOn: '',
+    updatedOn: '',
+    author: 'Utkarsh',
+    content: 'abcd123456',
+    title: 'xyzdkjdkj',
+  },
+  {
+    imgURL: '',
+    altTxt: '',
+    blogURL: '',
+    postedOn: '',
+    updatedOn: '',
+    author: 'Utkarsh',
+    content: 'abcd123456',
+    title: 'xyzdkjdkj',
+  },
+];
