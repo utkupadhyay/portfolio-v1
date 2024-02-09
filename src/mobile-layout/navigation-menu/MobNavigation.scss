@@ -1,0 +1,21 @@
+.mob-nav-container {
+  position: absolute;
+  background-color: aqua;
+  width: 12rem;
+  height: 100vh;
+  ul {
+    padding: 0;
+    a {
+      display: block;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: #1c1c1c;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}

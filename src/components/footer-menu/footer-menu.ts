@@ -1,5 +1,5 @@
 export const footerMenuData: FooterMenuData = [
-  'Gumroad',
+  // 'Gumroad',
   'Medium',
   'Linkedin',
   'Github',

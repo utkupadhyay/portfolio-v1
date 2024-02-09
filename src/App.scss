@@ -1,0 +1,65 @@
+.main-container {
+  max-width: 48rem;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    margin: 0 3rem;
+  }
+  //   background-color: pink;
+  .site-author-info-container {
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+    h2 {
+      color: #1c1c1c;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 1.5rem 0 0.8rem 0;
+    }
+    .intro-section-container {
+      color: #1c1c1c;
+    }
+  }
+  .latest-post-container {
+    margin: 3.5rem 0 0 0;
+    h2 {
+      color: #1c1c1c;
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 2.5rem 0 0 0;
+      &:nth-of-type(2) {
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+    .underline-container {
+      padding-bottom: 5px;
+      border-bottom: 8px solid #67e404;
+    }
+  }
+  .footer-container {
+    // margin-top: 3rem;
+    background: #f6f6f6;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 15rem;
+    z-index: -9;
+  }
+  .footer-message {
+    position: relative;
+    bottom: 0;
+    top: 10rem;
+    margin-top: 2rem;
+    color: #8d8c8c;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
