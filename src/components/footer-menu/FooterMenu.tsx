@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import './FooterMenu.scss';
+
 const FooterMenu = ({ footerMenuData }) => {
-  console.log({ footerMenuData });
   return (
     <>
       <div className="footer-wrapper">

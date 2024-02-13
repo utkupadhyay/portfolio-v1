@@ -1,14 +1,31 @@
-import React from 'react';
-import Navigation from './components/navigation/Navigation';
+import React, { useEffect, useState } from 'react';
+
 import Badge from './components/badge/Badge';
-import { data } from './components/latest-post/data';
-import LatestPost from './components/latest-post/LatestPost';
 import { footerMenuData } from './components/footer-menu/footer-menu';
 import FooterMenu from './components/footer-menu/FooterMenu';
+import { data } from './components/latest-post/data';
+import LatestPost from './components/latest-post/LatestPost';
+import Navigation from './components/navigation/Navigation';
 import SubscribeForm from './components/subscribe-form/SubscribeForm';
+import supabase from './database/supabaseClient';
+
 import './App.scss';
-import MobNavigation from './mobile-layout/navigation-menu/Navigation';
+
 const App = () => {
+  const [allBlogPosts, setAllBlogPosts] = useState<any>([]);
+  const fetchAllBlogs = async () => {
+    let { data, error } = await supabase.from('blogposts').select('*');
+    if (data) {
+      setAllBlogPosts(data);
+    }
+    if (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    fetchAllBlogs();
+  }, []);
+
   return (
     <>
       <Navigation />
@@ -34,7 +51,7 @@ const App = () => {
         </section>
         <section className="latest-post-container">
           <h3>Latest Posts</h3>
-          <LatestPost data={data} />
+          <LatestPost data={allBlogPosts} />
           <h2>Want to connect with me?</h2>
           <h2>
             Feel free to contact me at
