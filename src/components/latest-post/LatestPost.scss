@@ -4,6 +4,17 @@
     display: block;
   }
 }
+.post-img-size {
+  width: 21.875rem;
+  height: 221px;
+  border-radius: 10px;
+  margin: 0 2rem 0 0;
+  cursor: pointer;
+  @media screen and (max-width: 590px) {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
 .post-img-container {
   width: 21.875rem;
   height: 221px;
