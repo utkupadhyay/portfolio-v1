@@ -3,27 +3,27 @@ import React, { useEffect, useState } from 'react';
 import Badge from './components/badge/Badge';
 import { footerMenuData } from './components/footer-menu/footer-menu';
 import FooterMenu from './components/footer-menu/FooterMenu';
-import { data } from './components/latest-post/data';
-import LatestPost from './components/latest-post/LatestPost';
 import Navigation from './components/navigation/Navigation';
+import PostThumbnail from './components/post-thumbnail/PostThumnail';
 import SubscribeForm from './components/subscribe-form/SubscribeForm';
 import supabase from './database/supabaseClient';
 
 import './App.scss';
+import { fetchAllBlogs } from './utils/fetchAllBlogPosts';
 
 const App = () => {
   const [allBlogPosts, setAllBlogPosts] = useState<any>([]);
-  const fetchAllBlogs = async () => {
-    let { data, error } = await supabase.from('blogposts').select('*');
-    if (data) {
-      setAllBlogPosts(data);
-    }
-    if (error) {
-      console.error(error);
-    }
-  };
+  // const fetchAllBlogs = async () => {
+  //   let { data, error } = await supabase.from('blogposts').select('*');
+  //   if (data) {
+  //     setAllBlogPosts(data);
+  //   }
+  //   if (error) {
+  //     console.error(error);
+  //   }
+  // };
   useEffect(() => {
-    fetchAllBlogs();
+    fetchAllBlogs(setAllBlogPosts);
   }, []);
 
   return (
@@ -51,23 +51,24 @@ const App = () => {
         </section>
         <section className="latest-post-container">
           <h3>Latest Posts</h3>
-          <LatestPost data={allBlogPosts} />
-          <h2>Want to connect with me?</h2>
+          <PostThumbnail data={allBlogPosts} />
+          {/* <h2>Want to connect with me?</h2>
           <h2>
             Feel free to contact me at
             <span className="underline-container"> hello@utkupadhyay.com</span>
-          </h2>
+          </h2> */}
         </section>
-        <FooterMenu footerMenuData={footerMenuData} />
+        {/* <FooterMenu footerMenuData={footerMenuData} /> */}
+
+        {/* <footer className="footer-container">
+          <p className="footer-message">
+            Made in India with blessings of Shree Ram{' '}
+          </p>
+        </footer> */}
         <SubscribeForm
           placeholder="Enter your email"
           submitButtonTxt="Subscribe"
         />
-        <footer className="footer-container">
-          <p className="footer-message">
-            Made in India with blessings of Shree Ram{' '}
-          </p>
-        </footer>
       </main>
     </>
   );
