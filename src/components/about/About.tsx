@@ -1,3 +1,8 @@
 import React from 'react';
-const About = () => <>about</>;
+import Navigation from '../navigation/Navigation';
+const About = () => (
+  <>
+    <Navigation />
+  </>
+);
 export default About;
