@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { cacheImage } from '../../utils/CacheImage';
@@ -72,4 +72,4 @@ const PostThumbnail = ({ data, error }: any) => {
   </div>;
 };
 
-export default PostThumbnail;
+export default memo(PostThumbnail);

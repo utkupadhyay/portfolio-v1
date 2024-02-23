@@ -9,8 +9,9 @@ import { Link } from 'react-router-dom';
 
 const BlogPage = () => {
   const [allBlogData, setAllBlogData] = useState<any>([]);
+  const [errorFetch, setErrorFetch] = useState<any>([]);
   useEffect(() => {
-    fetchAllBlogs(setAllBlogData);
+    fetchAllBlogs(setAllBlogData, setErrorFetch);
   }, []);
 
   const sortedData = allBlogData?.sort(
