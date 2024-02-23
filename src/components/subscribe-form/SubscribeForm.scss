@@ -4,9 +4,10 @@
   justify-content: center;
   padding: 2rem 0 2rem 0;
   border-top: 1px solid #d4d4d4;
+
   input {
     padding: 8px;
-    width: 170px;
+    width: 270px;
     height: 27px;
     border: 0;
     border-radius: 5px;
@@ -16,7 +17,7 @@
 
     &::placeholder {
       color: #8d8c8c;
-      font-size: 14px;
+      font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -27,8 +28,9 @@
       outline: 3px solid #67e404;
     }
   }
+
   button {
-    width: 106px;
+    width: 136px;
     height: 45px;
     flex-shrink: 0;
     border: 0;

@@ -16,7 +16,7 @@ export interface DataProps {
   title: string;
 }
 
-const PostThumbnail = ({ data }: any) => {
+const PostThumbnail = ({ data, error }: any) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState<Boolean>(true);
   const sortedData = data.sort(
@@ -24,7 +24,6 @@ const PostThumbnail = ({ data }: any) => {
       new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
   );
   const postData = sortedData.length > 1 ? sortedData.slice(0, 2) : data;
-  console.log({ postData });
   useEffect(() => {
     if (data.length > 0) {
       Promise.all(
@@ -46,28 +45,31 @@ const PostThumbnail = ({ data }: any) => {
     (post: DataProps, i: number) => {
       return (
         post?.coverURL !== '' && (
-          <div
-            className="post-thumbail-container"
+          <article
+            className="post-thumbnail-wrapper"
             key={i}
             onClick={() => handleImageClick(post.id)}>
             <picture>
               <img
                 src={post.coverURL}
-                className="post-img-size"
+                // className="post-img-size"
                 alt={post.altText}
               />
             </picture>
-            <div>
+            <div className='post-thumbnail-details'>
               <p>{post.title}</p>
               <p>{timeConversion(post.created_at)}</p>
             </div>
-          </div>
+          </article>
         )
       );
     }
   );
 
-  return <div className="blog-article-meta">{latestPostImageContainer}</div>;
+  return <div className="post-thumbnail-container">
+    {!loading && latestPostImageContainer}
+    {error && <p>{error && error.message}</p>}
+  </div>;
 };
 
 export default PostThumbnail;

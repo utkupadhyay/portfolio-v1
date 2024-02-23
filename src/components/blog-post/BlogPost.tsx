@@ -51,8 +51,7 @@ const BlogPost = () => {
           <p>{timeConversion(created_at)}</p>
         </section>
         <section className="content">
-          {/* <DecompressedText compressedText={compressedText} /> */}
-          {content}
+          <p>{content}</p>
         </section>
       </section>
     </>

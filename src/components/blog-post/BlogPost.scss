@@ -1,6 +1,17 @@
 .blog-post-main-container {
   max-width: 48rem;
   margin: 0 auto;
+
+
+
+  @media screen and (max-width: 868px) {
+    margin: 0 3rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin: 0 1rem;
+  }
+
   h2 {
     color: #1c1c1c;
     font-size: 36px;
@@ -8,33 +19,58 @@
     font-weight: 600;
     line-height: normal;
   }
+
   img {
-    width: 48rem;
-    height: 419px;
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
   }
+
   .about-author-date-time {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #d4d4d5;
+
     p {
       color: #1c1c1c;
-      font-size: 14px;
+      font-size: 12px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
     }
+
     p:first-child {
       justify-self: start;
+
     }
+
     p:nth-child(2) {
       justify-self: end;
     }
   }
+
   .content {
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+
     margin: 2rem 0;
+
+    p {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: #1c1c1c;
+
+      &::first-letter {
+        float: left;
+        font-size: 4rem;
+        line-height: 0.8;
+        padding-right: 0.1em;
+        font-weight: bold;
+        position: absolute;
+        box-sizing: border-box;
+        padding-top: 0.3rem;
+        font-weight: 900;
+      }
+    }
   }
 }
