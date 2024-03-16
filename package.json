@@ -1,5 +1,5 @@
 {
-  "homepage": "https://utkupadhyay.github.io/portfolio-v1/",
+  "homepage": "https://utkupadhyay.github.io/portfolio-v1",
   "name": "portfolio-v1",
   "private": true,
   "version": "0.0.0",
@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -14,6 +16,7 @@
     "@supabase/supabase-js": "^2.39.3",
     "autoprefixer": "^10.4.18",
     "dayjs": "^1.11.10",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
