@@ -1,5 +1,4 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
@@ -16,11 +15,14 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
+
   content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-    './public/index.html',
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
 }
