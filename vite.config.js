@@ -21,6 +21,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
+      input: ['./src/index.jsx', './index.html']
     },
   },
 });
