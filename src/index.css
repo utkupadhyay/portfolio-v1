@@ -1,0 +1,172 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --h1-font-size: 64px;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: -.02em;
+}
+
+.mb-xs {
+  margin-bottom: 30px;
+}
+
+.ml-1\/6 {
+  margin-left: 16.666667%;
+}
+
+.mt-md {
+  margin-top: 70px;
+}
+
+.mb-\[100px\],
+.mb-gr {
+  margin-bottom: 100px;
+}
+
+.my-sm {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.rounded-sm {
+  border-radius: 15px;
+}
+
+.mt-gr {
+  margin-top: 100px;
+}
+
+.mb-md {
+  margin-bottom: 70px;
+}
+
+.gap-xs {
+  gap: 30px;
+}
+
+.flex {
+  display: flex;
+}
+
+.mb-lg {
+  margin-bottom: 150px;
+}
+
+.pb-xs {
+  padding-bottom: 30px;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.max-w-content {
+  max-width: 1508px;
+}
+
+.flex {
+  display: flex;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reverse {
+  display: inline-block;
+  position: relative;
+}
+
+.reverse::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  background: #000;
+  transform-origin: center left;
+  transition: transform .5s cubic-bezier(.55, 0, .1, 1);
+  transform: scaleX(1);
+}
+
+.reverse:after {
+  margin-top: -0.125rem;
+  height: 1.5px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -.02em;
+}
+
+@media (min-width: 768px) {
+  .md\:rounded {
+    border-radius: 45px;
+  }
+
+  .md\:text-18 {
+    font-size: 18px;
+  }
+
+  .md\:mr-1\/12 {
+    margin-right: 8.333333%;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  h1 {
+    font-size: 114px;
+    line-height: 126px;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .lg\:mt-lg {
+    margin-top: 150px;
+  }
+
+  .lg\:mb-xl {
+    margin-bottom: 200px;
+  }
+
+  .lg\:mb-xxl {
+    margin-bottom: 250px;
+  }
+
+  .reverse:after {
+    margin-top: -0.25rem;
+    height: 2.5px;
+  }
+
+}
