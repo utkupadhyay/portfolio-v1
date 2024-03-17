@@ -4,7 +4,7 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
-  plugins: [react()],
+  base: process.env.VITE_BASE_PATH || '/deploy_react_app_github_pages_vercel',
   css: {
     postcss: {
       plugins: [tailwindcss(), autoprefixer()],
