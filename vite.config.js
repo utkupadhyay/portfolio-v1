@@ -11,17 +11,13 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3001, // set the port number here
+    port: 3001,
   },
   build: {
     emptyOutDir: true,
-    lib: {
-      entry: './src/index.jsx',
-      formats: ['cjs', 'es'],
-    },
+    outDir: 'dist',
     rollupOptions: {
       external: ['react', 'react-dom'],
-      input: ['./src/index.jsx', './index.html']
     },
   },
 });
